@@ -1,0 +1,178 @@
+.gallery {
+    & .container {
+        flex-direction: column;
+    }
+    padding: 80px 0 90px;
+    background: $gallery_bg;
+    &__header {
+        text-align: center;
+        margin-bottom: 35px;
+        color: $dark_text;
+        width: 60%;
+    }
+    &__text {
+        margin-top: 20px;
+    }
+    &__collage {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__img {
+        -webkit-box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        -moz-box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        box-shadow: -1px 3px 5px 1px rgb(88, 88, 88);
+        & img {
+            width: 100%;
+            height: 100%;
+        }
+        &:nth-child(1) {
+            width: 64%;
+            height: 550px;
+        }
+        &:nth-child(3) {
+            margin-top: 50px;
+            width: 47%;
+            height: 400px;
+        }
+        &:nth-child(4) {
+            margin-top: 50px;
+            width: 47%;
+            height: 400px;
+        }
+        &-wrapper {
+            width: 31%;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & .gallery__img {
+                width: 100%;
+                height: 45%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .button-gallery {
+        padding: 15px 0;
+    }
+    .gallery {
+        &__img {
+            &:nth-child(1) {
+                width: 100%;
+                height: 550px;
+            }
+            &:nth-child(3) {
+                margin-top: 50px;
+                width: 47%;
+                height: 400px;
+            }
+            &:nth-child(4) {
+                margin-top: 50px;
+                width: 47%;
+                height: 400px;
+            }
+            &-wrapper {
+                margin-top: 50px;
+                width: 100%;
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                & .gallery__img {
+                    width: 47%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        padding: 80px 0 50px;
+        &__collage {
+            justify-content: center;
+        }
+        &__img {
+            &:nth-child(1) {
+                width: 90%;
+                height: 550px;
+            }
+            &:nth-child(3) {
+                margin-top: 50px;
+                width: 90%;
+                height: 400px;
+            }
+            &:nth-child(4) {
+                margin-top: 50px;
+                width: 90%;
+                height: 400px;
+            }
+            &-wrapper {
+                margin-top: 0;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 900px;
+                & .gallery__img {
+                    margin-top: 50px;
+                    width: 100%;
+                    height: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__header {
+            grid-column: 2/12;
+            text-align: center;
+            margin-bottom: 35px;
+            color: $dark_text;
+        }
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 100px) 220px;
+        }
+    }
+    .button-gallery {
+        grid-column: 5/9;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__header {
+            grid-column: 2/12;
+            text-align: center;
+            margin-bottom: 35px;
+            color: $dark_text;
+        }
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 90px) 140px;
+            grid-gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .gallery {
+        padding: 40px 0 25px;
+        &__collage {
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(2, 70px) 110px;
+            grid-gap: 10px;
+        }
+    }
+}

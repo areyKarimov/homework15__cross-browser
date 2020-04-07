@@ -1,0 +1,101 @@
+.services {
+    padding: 180px 0 150px;
+    position: relative;
+    background: $services_bg;
+    & .container {
+        justify-content: space-between;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__link {
+        position: relative;
+        background: $light_text;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        -webkit-box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+        -moz-box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+        box-shadow: -1px 3px 5px 1px rgba(138, 138, 138, 1);
+        perspective: 200;
+        transform: rotateX(0);
+        transition: all 0.3s ease-in;
+        margin-bottom: 20px;
+        &:hover {
+            -webkit-box-shadow: -1px 15px 5px 1px rgba(138, 138, 138, 1);
+            -moz-box-shadow: -1px 15px 5px 1px rgba(138, 138, 138, 1);
+            box-shadow: -1px 15px 5px 1px rgba(138, 138, 138, 1);
+            transform: rotateX(30deg);
+            cursor: pointer;
+        }
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $dark_text;
+            position: relative;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 35px 80px 35px 25px;
+        }
+        &::after {
+            color: $dark_text;
+            position: absolute;
+            font-family: 'icomoon' !important;
+            font-size: 40px;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:nth-child(1)::after {
+            content: "\e900";
+        }
+        &:nth-child(2)::after {
+            content: "\e901";
+        }
+        &:nth-child(3)::after {
+            content: "\e902";
+        }
+        &:nth-child(4)::after {
+            content: "\e903";
+        }
+    }
+    &__title {
+        color: $light_text;
+        position: relative;
+        z-index: 2;
+    }
+    &__img {
+        position: absolute;
+        right: 25%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services {
+        & .container {
+            flex-direction: column;
+        }
+        &__title {
+            position: relative;
+            top: 70px;
+            text-align: center;
+        }
+        &__list {
+            order: 1;
+            margin-top: 300px;
+        }
+        &__img {
+            top: 50px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}

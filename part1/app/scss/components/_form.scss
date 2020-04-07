@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    &__item {
+        color: $light_text;
+        position: relative;
+        outline: none;
+        margin-bottom: 15px;
+        padding: 21px;
+        background: $form_color;
+        opacity: 0.5;
+        border: none;
+        transition: all 0.3s ease-in;
+        border-left: 4px solid transparent;
+        &::placeholder {
+            color: $light_text;
+        }
+        &:focus {
+            opacity: 1;
+            border-left: 4px solid #355b82;
+        }
+    }
+}

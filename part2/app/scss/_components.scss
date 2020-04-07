@@ -1,0 +1,211 @@
+.item {
+    padding: 40px 60px 0 60px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    height: 610px;
+    &::before {
+        content: '';
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0;
+        background: $bg-item;
+        width: 100%;
+        color: $text-footer;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+    }
+    &--center {
+        height: 650px;
+        &::before {
+            content: 'Ordernow & get 15% Discount';
+            font-size: 11px;
+            height: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & .item__bg::before {
+            bottom: -30px;
+        }
+    }
+    &__bg {
+        background: $bg-item;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 450px;
+            height: 500px;
+            background: $bg-item1;
+            border-radius: 50%;
+        }
+    }
+    &__prise {
+        font-family: 'Bebas Neue', cursive;
+        font-size: 60px;
+        font-weight: 100;
+        position: relative;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        & span:first-child {
+            font-size: 24px;
+        }
+        & span:last-child {
+            font-size: 16px;
+        }
+        &::before {
+            position: absolute;
+            content: '$';
+            font-size: 24px;
+            top: 10px;
+            left: 0;
+        }
+    }
+    &__title {
+        font-size: 26px;
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 0.1em;
+        margin-bottom: 70px;
+    }
+    &__services {
+        padding-top: 60px;
+        position: relative;
+        margin-bottom: 30px;
+        & span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 100px;
+        }
+    }
+    &__service {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    &__button {
+        position: absolute;
+        bottom: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 56px;
+        border-radius: 28px;
+        background: $btn-aside;
+        color: $text-light;
+        white-space: nowrap;
+        padding: 0 45px;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        transition: transform 0.2s ease-in;
+        &:hover {
+            transform: translateX(-50%) scale(1.2);
+        }
+        &--center {
+            background: $btn-center;
+            bottom: 81px;
+        }
+    }
+    &__popular {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 400;
+        font-size: 24px;
+        width: 45px;
+        height: 45px;
+        background: $btn-center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: $text-light;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            top: -10px;
+            right: -10px;
+            background: $btn-center;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            top: -15px;
+            right: -15px;
+            background: $btn-center;
+        }
+        & span {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px 25px;
+            right: -130px;
+            height: 30px;
+            border-radius: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $bg-popular;
+            opacity: 0;
+            font-size: 16px;
+            transition: opacity 0.2s ease-in;
+            &::before {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -4px;
+                content: '';
+                border-right: 7px solid $bg-popular;
+                border-top: 7px solid transparent;
+                border-bottom: 7px solid transparent;
+            }
+        }
+        &:hover {
+            & span {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#icon1 {
+    content: url(../img/icon1.png);
+}
+
+#icon2 {
+    content: url(../img/icon2.png);
+}
+
+#icon3 {
+    content: url(../img/icon3.png);
+    width: 30px;
+}
+
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Bebas Neue', cursive; */
